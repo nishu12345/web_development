@@ -47,3 +47,9 @@ function goto(url) {
     window.location = url;
 
 }
+
+$(document).ready(function () {
+    $('.carousel').carousel({
+        interval: 3000
+    })
+});
