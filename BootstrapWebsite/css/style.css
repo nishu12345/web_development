@@ -7,6 +7,9 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 header,
 section {
@@ -24,7 +27,7 @@ section {
 
     /* Variables to hold colors */
     --light-black: #2e2c2caf;
-    --bggradient: linear-gradient(to bottom, #d32c77, #ff512f);
+    --bggradient: linear-gradient(to bottom, #dd2476, #ff512f);
     --light-gray: rgba(255, 255, 255, 0);
 }
 
@@ -320,9 +323,9 @@ header .container .col-md-7 button {
     font-size: 1.5em;
 }
 
-/* .section-4 .carousel-item {
+.section-4 .carousel-item {
     margin-bottom: 10rem;
-} */
+}
 
 .border-radius {
     border-radius: 340px;
@@ -330,9 +333,57 @@ header .container .col-md-7 button {
 }
 
 /* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.815);
+    overflow-x: hidden;
+    padding: 14vmin 18vmin;
+}
 
-/* footer .container {
-    background: rgba(0, 0, 0, 0);
-} */
+footer p>span {
+    color: #ff512f;
+}
+
+footer input {
+    /* !important to override properties */
+    border: none !important;
+}
+
+footer input::placeholder {
+    color: white !important;
+}
+
+footer .input-group .input-group-text {
+    background: var(--bggradient);
+    border: none;
+}
+
+footer .column i {
+    color: #dd2476;
+}
+
+/* Leave the first icon and select others */
+footer .column i+i {
+    padding: 0 0.5em;
+}
+
+footer .column a {
+    color: #dd2476;
+    text-decoration: none;
+}
+
+/* Leave the first icon and select others */
+footer .column a+a {
+    padding: 0 0.5em;
+}
+
+/* Sticky Class */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.815);
+    z-index: 9999;
+    transition: all 1.5s ease;
+}
 
 /* em,rem, vmin -> relative units in css */
