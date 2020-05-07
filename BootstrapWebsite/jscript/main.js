@@ -53,3 +53,44 @@ $(document).ready(function () {
         interval: 3000
     })
 });
+
+
+var i = -10;
+var uploadProgressBar = $("#upload-bar");
+
+var j = -10;
+var convertProgressBar = $("#convert-bar");
+
+function restartProgressBar() {
+    j = 0
+    i = 0
+}
+
+function countNumbers() {
+    if (i > 0 && i < 100) {
+        i = i + 1;
+        uploadProgressBar.css("width", i + "%");
+    } else {
+        i = i + 1;
+
+    }
+    // Wait for sometime before running this script again
+    setTimeout("countNumbers()", 500);
+}
+countNumbers();
+
+
+
+
+function countNumbers1() {
+    if (j > 0 && j < 100) {
+        j = j + 1;
+        convertProgressBar.css("width", j + "%");
+    } else {
+        j = j + 1;
+    }
+
+    // Wait for sometime before running this script again
+    setTimeout("countNumbers1()", 500);
+}
+countNumbers1();

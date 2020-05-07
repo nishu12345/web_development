@@ -28,6 +28,8 @@ section {
     /* Variables to hold colors */
     --light-black: #2e2c2caf;
     --bggradient: linear-gradient(to bottom, #dd2476, #ff512f);
+    /* --bggradient: linear-gradient(to bottom, #ffafbd, #ffc3a0); */
+    /* --bggradient: linear-gradient(to bottom, #20DED3, #F6FBA2); */
     --light-gray: rgba(255, 255, 255, 0);
 }
 
@@ -41,6 +43,7 @@ header a {
 
 header {
     background: #dd2476;
+    /* background: #20DED3; */
     background: var(--bggradient);
 }
 
@@ -254,8 +257,8 @@ header .container .col-md-7 button {
     background: rgba(208, 241, 241, 0.199);
     border-top-right-radius: 190px;
     border-top-left-radius: 170px;
-
 }
+
 
 
 
@@ -327,6 +330,7 @@ header .container .col-md-7 button {
     margin-bottom: 10rem;
 }
 
+
 .border-radius {
     border-radius: 340px;
     width: 60%;
@@ -341,11 +345,13 @@ footer {
 
 footer p>span {
     color: #ff512f;
+    /* color: #ee9ca7; */
 }
 
 footer input {
     /* !important to override properties */
     border: none !important;
+    margin-left: -2vmin;
 }
 
 footer input::placeholder {
@@ -368,6 +374,7 @@ footer .column i+i {
 
 footer .column a {
     color: #dd2476;
+    /* color: #ee9ca7; */
     text-decoration: none;
 }
 
@@ -375,6 +382,32 @@ footer .column a {
 footer .column a+a {
     padding: 0 0.5em;
 }
+
+
+/* Style Upload and Convert Modal */
+.modal .modal-header {
+    background: rgba(208, 241, 241, 0.199);
+    border-bottom: 0;
+    font-family: var(--Snigle-font);
+}
+
+.modal .modal-body {
+    background: rgba(208, 241, 241, 0.199);
+}
+
+.modal .modal-footer {
+    background: rgba(208, 241, 241, 0.199);
+    border-top: 0;
+    font-family: var(--Snigle-font);
+}
+
+
+.modal .modal-footer>button {
+    border-radius: 2em;
+}
+
+
+
 
 /* Sticky Class */
 .sticky {
