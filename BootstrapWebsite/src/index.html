@@ -136,104 +136,104 @@
             <div class="purchase text-center" id="convert">
                 <h1>Convert To Your Popular Formats</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                <div class="cards">
-                    <div class="d-flex flex-row justify-content-center flex-wrap">
-                        <!-- First Card -->
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="title">
-                                    <h5 class="card-title">Preset 1</h5>
-                                </div>
-                                <p class="card-text">
-                                    Convert Your Video in MP4 Format
-                                </p>
-                                <div class="pricing">
+                <!-- Place Your Code Here -->
+                <ul class="nav nav-tabs md-tabs justify-content-center" id="myTabMD" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#home-md" role="tab"
+                            aria-controls="home-md" aria-selected="true">AV1 Video Formats</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#profile-md" role="tab"
+                            aria-controls="profile-md" aria-selected="false">Other Video Formats</a>
+                    </li>
+                </ul>
+                <div class="tab-content card pt-5" id="myTabContentMD">
+                    <div class="tab-pane fade show active" id="home-md" role="tabpanel" aria-labelledby="home-tab-md">
 
 
-                                    <!-- <a href="#" class="btn btn-dark px-5 py-2 mb-4"><i
-                                            class="fas fa-upload fa-1x mr-2"></i>Choose File</a> -->
+                        <form id="dropFileForm" action="http://localhost/upload.php" method="post"
+                            onsubmit="uploadFiles(event)">
+                            <input type="file" name="files[]" id="fileInput" multiple onchange="addFiles(event)" hidden>
+                            <label for="fileInput" class="fas fa-upload fa-2x" id="fileLabel"
+                                ondragover="overrideDefault(event);fileHover();"
+                                ondragenter="overrideDefault(event);fileHover();"
+                                ondragleave="overrideDefault(event);fileHoverEnd();" ondrop="overrideDefault(event);fileHoverEnd();
+                                  addFiles(event);">
 
+                                <br>
+                                <span id="fileLabelText">
+                                    Choose a file or drag it here
+                                </span>
 
-                                    <label for="select" class="btn btn-dark px-5 py-2 mb-4">
-                                        <i class="fas fa-upload fa-1x mr-2"></i>Select
-                                        File</label>
-                                    <input type="file" id="select" class="btn btn-dark px-5 py-2 mb-4" hidden>
+                                <span id="uploadStatus"></span>
 
-                                    <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
-                                        <button class="btn btn-dark" data-toggle="modal"
-                                            data-target="#uploadModalCenter">Upload</button>
-                                        <button class="btn btn-secondary" data-toggle="modal"
-                                            data-target="#convertModalCenter">Convert</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            </label>
+                            <br>
 
-                        <!-- Second Card -->
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="title">
-                                    <h5 class="card-title">Preset 2</h5>
-                                </div>
-                                <p class="card-text">
-                                    Convert Your Video In MKV Format
-                                </p>
-                                <div class="pricing">
+                            <div class="dropdown btn-group dropup">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select Your Preset
+                                    <span class="caret"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
 
-                                    <!-- <a href="#" class="btn btn-dark px-5 py-2 mb-4"><i
-                                            class="fas fa-upload fa-1x mr-2"></i>Choose File</a>
-                                    <br>
-                                    <a href="#" class="btn btn-dark px-5 py-2 mb-3">Upload</a> -->
-                                    <label for="select" class="btn btn-dark px-5 py-2 mb-4">
-                                        <i class="fas fa-upload fa-1x mr-2"></i>Select
-                                        File</label>
-                                    <input type="file" id="select" class="btn btn-dark px-5 py-2 mb-4" hidden>
-
-                                    <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
-                                        <button class="btn btn-dark" data-toggle="modal"
-                                            data-target="#uploadModalCenter">Upload</button>
-                                        <button class="btn btn-secondary" data-toggle="modal"
-                                            data-target="#convertModalCenter">Convert</button>
-                                    </div>
-
+                                    <li><a class="dropdown-item" data-value="preset1">Preset 1 - 1080p</a></li>
+                                    <li><a class="dropdown-item" data-value="preset2">Preset 2 - 720p</a></li>
+                                    <li><a class="dropdown-item" data-value="preset3">Preset 3 - 360p</a>
+                                    </li>
+                                    <li><a class="dropdown-item" data-value="preset4">Preset 4 - 144p</a></li>
                                 </div>
                             </div>
-                        </div>
+                            <button class="btn btn-dark" data-toggle="modal" data-target="#uploadModalCenter">Upload &
+                                Convert</button>
+                        </form>
 
-                        <!-- Third Card -->
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="title">
-                                    <h5 class="card-title">Preset 3</h5>
-                                </div>
-                                <p class="card-text">
-                                    Convert Your Video In AVI Format
-                                </p>
-                                <div class="pricing">
-
-                                    <!-- <a href="#" class="btn btn-dark px-5 py-2 mb-4"><i
-                                            class="fas fa-upload fa-1x mr-2"></i>Choose File</a>
-                                    <br>
-                                    <a href="#" class="btn btn-dark px-5 py-2 mb-3">Upload</a> -->
-
-                                    <label for="select" class="btn btn-dark px-5 py-2 mb-4">
-                                        <i class="fas fa-upload fa-1x mr-2"></i>Select
-                                        File</label>
-                                    <input type="file" id="select" class="btn btn-dark px-5 py-2 mb-4" hidden>
-
-                                    <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
-
-                                        <button class="btn btn-dark" data-toggle="modal"
-                                            data-target="#uploadModalCenter">Upload</button>
-                                        <button class="btn btn-secondary" data-toggle="modal"
-                                            data-target="#convertModalCenter">Convert</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                    <div class="tab-pane fade" id="profile-md" role="tabpanel" aria-labelledby="profile-tab-md">
+
+                        <form id="dropFileForm" action="http://localhost/upload.php" method="post"
+                            onsubmit="uploadFiles(event)">
+                            <input type="file" name="files[]" id="fileInput" multiple onchange="addFiles(event)" hidden>
+                            <label for="fileInput" class="fas fa-upload fa-2x" id="fileLabel"
+                                ondragover="overrideDefault(event);fileHover();"
+                                ondragenter="overrideDefault(event);fileHover();"
+                                ondragleave="overrideDefault(event);fileHoverEnd();" ondrop="overrideDefault(event);fileHoverEnd();
+                              addFiles(event);">
+
+                                <br>
+                                <span id="fileLabelText">
+                                    Choose a file or drag it here
+                                </span>
+                                <span id="uploadStatus"></span>
+                            </label>
+
+                            <div class="dropdown btn-group dropup">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select Your Preset
+                                    <span class="caret"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a class="dropdown-item" data-value="preset1">Preset 1 - 4320p</a></li>
+                                    <li><a class="dropdown-item" data-value="preset2">Preset 2 - 2160p</a></li>
+                                    <li><a class="dropdown-item" data-value="preset3">Preset 3 - 1080p</a></li>
+                                    <li><a class="dropdown-item" data-value="preset4">Preset 4 - 720p</a></li>
+                                    <li><a class="dropdown-item" data-value="preset5">Preset 5 - 360p</a>
+                                    </li>
+                                    <li><a class="dropdown-item" data-value="preset6">Preset 6 - 144p</a></li>
+                                </div>
+                            </div>
+
+
+                            <button class="btn btn-dark" data-toggle="modal"
+                                data-target="#uploadModalCenter">Upload</button>
+                        </form>
+
+                    </div>
+
                 </div>
+
             </div>
         </section>
 

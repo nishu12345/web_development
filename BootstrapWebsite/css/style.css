@@ -27,9 +27,11 @@ section {
 
     /* Variables to hold colors */
     --light-black: #2e2c2caf;
-    --bggradient: linear-gradient(to bottom, #dd2476, #ff512f);
+    /* --bggradient: linear-gradient(to bottom, #dd2476, #ff512f); */
     /* --bggradient: linear-gradient(to bottom, #ffafbd, #ffc3a0); */
     /* --bggradient: linear-gradient(to bottom, #20DED3, #F6FBA2); */
+    background-color: #0beef9;
+    --bggradient: linear-gradient(315deg, #0beef9 0%, #48a9fe 74%);
     --light-gray: rgba(255, 255, 255, 0);
 }
 
@@ -42,8 +44,9 @@ header a {
 }
 
 header {
-    background: #dd2476;
+    /* background: #dd2476; */
     /* background: #20DED3; */
+    background: #0beef9;
     background: var(--bggradient);
 }
 
@@ -211,6 +214,7 @@ header .container .col-md-7 button {
 .number .rect h1 {
     font-size: 4rem;
     color: tomato;
+
 }
 
 .number .rect p {
@@ -259,7 +263,44 @@ header .container .col-md-7 button {
     border-top-left-radius: 170px;
 }
 
+.nav .nav-link {
+    font-family: var(--Lobster);
+    font-size: 2em;
+}
 
+.tab-content {
+    border: none;
+}
+
+
+.tab-pane .fas {
+    width: 100%;
+    padding-top: 2.5em;
+    margin: none;
+    color: var(--light-black);
+
+}
+
+.tab-pane #fileLabelText {
+    font-family: var(--Snigle-font);
+
+}
+
+
+.dropdown {
+    font-family: var(--Snigle-font);
+
+}
+
+
+.dropdown .dropdown-menu {
+    border-radius: 0.5em;
+}
+
+.dropdown-item:hover {
+    background: rgba(208, 241, 241, 0.199);
+    ;
+}
 
 
 /* Section 3 */
@@ -346,6 +387,7 @@ footer {
 footer p>span {
     color: #ff512f;
     /* color: #ee9ca7; */
+    /* color: #0beef9; */
 }
 
 footer input {
@@ -364,7 +406,9 @@ footer .input-group .input-group-text {
 }
 
 footer .column i {
-    color: #dd2476;
+    /* color: #dd2476; */
+    /* color: #0beef9; */
+    color: #0beef9;
 }
 
 /* Leave the first icon and select others */
@@ -373,7 +417,8 @@ footer .column i+i {
 }
 
 footer .column a {
-    color: #dd2476;
+    /* color: #dd2476; */
+    color: #0beef9;
     /* color: #ee9ca7; */
     text-decoration: none;
 }
